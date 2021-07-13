@@ -1,7 +1,8 @@
-.hello {
-  color: red;
+ul {
+  list-style-type: none;
 }
 
-body {
-  background-color: bisque;
+a {
+  text-decoration: none;
+  color: black;
 }
