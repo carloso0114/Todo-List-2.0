@@ -1,14 +1,14 @@
 export const taskList = [
   {
-    description: "take the trash out",
+    description: 'take the trash out',
     completed: true,
     index: 0,
   },
   {
-    description: "Do the dishes",
+    description: 'Do the dishes',
     completed: false,
     index: 1,
-  }
+  },
 ];
 
 export class Task {

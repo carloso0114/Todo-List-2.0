@@ -1,65 +1,49 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Todo List
 
-> One paragraph statement about the project.
+> In this project, you'll be able to find to-do tasks already been added to an array of objects.
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+Later on you can add tasks by yourself pressing enter in the input area.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Javascript/HTML/CSS
+- Webpack 
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+[Live Demo Link](https://raw.githack.com/carloso0114/Todo-List-2.0/todo_list_day1/dist/index.html)
 
 ### Prerequisites
+- Browser
+- Text Editor (VSCode is suggested.)
+- Git installed 
+- Its recommended to have a screen resolution equal or greater than 1280*720p as the project is not meant to be responsive.
 
 ### Setup
+- Open Terminal
+- In your prefered folder, run `https://github.com/carloso0114/Todo-List-2.0.git`
+- Open the `index.html` in the /dist to run the project
 
-### Install
 
 ### Usage
-
-### Run tests
-
-### Deployment
-
-
+-Fill the task inputs with your task, and press Enter and you'll be able to see your To-do Task. Later on you could click on the check Box to mark it as completed.
 
 ## Authors
 
-👤 **Author1**
+👤  **Carlos Ospina**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [carloso0114](https://github.com/carloso0114)
+- LinkedIn: [Carlos Ospina](https://www.linkedin.com/in/carlosospina/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/carloso0114/Todo-List-2.0/issues).
 
 ## Show your support
 
