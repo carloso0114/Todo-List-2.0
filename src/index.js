@@ -23,7 +23,7 @@ const showTasks = () => {
           <i class="fas fa-ellipsis-v"></i>
         `;
     }
-    li.classList.add('list-group-ite');
+    li.classList.add('list-group-item');
     ulSelector.appendChild(li);
   });
 };
