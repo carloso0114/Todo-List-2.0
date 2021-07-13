@@ -106,7 +106,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n\r\n\n\n//# sourceURL=webpack://todo-list-2.0/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_taskClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/taskClass */ \"./src/modules/taskClass.js\");\n\r\n\r\n\r\nconst inputSelector=document.querySelector(\"#inputTask\")\r\nconst ulSelector = document.querySelector(\"#taskUl\")\r\n\r\nconst showTasks = () => {\r\n    ulSelector.innerHTML=\"\"\r\n    _modules_taskClass__WEBPACK_IMPORTED_MODULE_1__.taskList.forEach((e) => {\r\n      const li = document.createElement('li');\r\n      if (e.completed) {\r\n        li.innerHTML = `\r\n          <input class=\"checkbox\" type=\"checkbox\" id=\"${e.index}\" checked>\r\n          <label class=\"description\" for=\"${e.index}\">${e.description}</label>\r\n        `;\r\n      } else {\r\n        li.innerHTML = `\r\n          <input class=\"checkbox\" type=\"checkbox\" id=\"${e.index}\">\r\n          <label class=\"description\" for=\"${e.index}\">${e.description}</label>\r\n        `;\r\n      }\r\n      ulSelector.appendChild(li);\r\n    });\r\n  };\r\n  \r\n  showTasks();\r\n\r\ninputSelector.addEventListener('keypress', function (e) {\r\n    if (e.key === 'Enter') {\r\n        const task = new _modules_taskClass__WEBPACK_IMPORTED_MODULE_1__.Task(inputSelector.value);\r\n        _modules_taskClass__WEBPACK_IMPORTED_MODULE_1__.taskList.push(task)\r\n        showTasks()\r\n        inputSelector.value=\"\"\r\n    }\r\n});\r\n\r\n\r\n\n\n//# sourceURL=webpack://todo-list-2.0/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/taskClass.js":
+/*!**********************************!*\
+  !*** ./src/modules/taskClass.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"taskList\": () => (/* binding */ taskList),\n/* harmony export */   \"Task\": () => (/* binding */ Task)\n/* harmony export */ });\nconst taskList = [\r\n  {\r\n    description: \"take the trash out\",\r\n    completed: true,\r\n    index: 0,\r\n  },\r\n  {\r\n    description: \"Do the dishes\",\r\n    completed: false,\r\n    index: 1,\r\n  }\r\n];\r\n\r\nclass Task {\r\n  constructor(description, completed = false, index = taskList.length) {\r\n    this.description = description;\r\n    this.completed = completed;\r\n    this.index = index;\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://todo-list-2.0/./src/modules/taskClass.js?");
 
 /***/ })
 
