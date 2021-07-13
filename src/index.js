@@ -10,15 +10,20 @@ const showTasks = () => {
       const li = document.createElement('li');
       if (e.completed) {
         li.innerHTML = `
-          <input class="checkbox" type="checkbox" id="${e.index}" checked>
+          <input class="checkbox m-2" type="checkbox" id="${e.index}" checked>
           <label class="description" for="${e.index}">${e.description}</label>
+          <i class="fas fa-ellipsis-v justify-content-end "></i>
+
+
         `;
       } else {
         li.innerHTML = `
-          <input class="checkbox" type="checkbox" id="${e.index}">
+          <input class="checkbox m-2" type="checkbox" id="${e.index}">
           <label class="description" for="${e.index}">${e.description}</label>
+          <i class="fas fa-ellipsis-v"></i>
         `;
       }
+      li.classList.add("list-group-item");
       ulSelector.appendChild(li);
     });
   };
