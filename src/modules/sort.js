@@ -9,4 +9,11 @@ export default () => {
       e.classList.remove('dragging');
     });
   });
+  containers.forEach((e) => {
+    e.addEventListener('dragover', (element) => {
+      element.preventDefault();
+      const draggedItem = document.querySelector('.dragging');
+      e.appendChild(draggedItem);
+    });
+  });
 };
