@@ -5,5 +5,8 @@ export default () => {
     e.addEventListener('dragstart', () => {
       e.classList.add('dragging');
     });
+    e.addEventListener('dragend', () => {
+      e.classList.remove('dragging');
+    });
   });
 };

@@ -2,7 +2,6 @@ import './style.css';
 import { Task, taskList } from './modules/taskClass.js';
 import showTasks from './modules/showTasks.js';
 import { getLocalstorage, saveLocalstorage } from './modules/localstorage.js';
-import sort from './modules/sort.js';
 
 getLocalstorage();
 
