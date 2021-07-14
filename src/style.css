@@ -6,3 +6,11 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.draggable {
+  cursor: move;
+}
+
+.dragging {
+  opacity: .5;
+}
