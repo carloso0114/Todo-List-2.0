@@ -11,12 +11,12 @@ a {
   cursor: move;
 }
 
-.test {
+.hover {
   background-color: gray;
   opacity: 0.6;
 }
 
-.test2 {
+.hover2 {
   background-color: blue;
   opacity: 0.6;
 }

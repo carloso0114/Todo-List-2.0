@@ -10,20 +10,20 @@ const sorting = () => {
   let dropped = null;
   draggables.forEach((e) => {
     e.addEventListener('dragstart', () => {
-      e.classList.add('test');
+      e.classList.add('hover');
       dragged = e.children[0].children[0].id;
     });
 
     e.addEventListener('dragend', () => {
-      e.classList.remove('test');
+      e.classList.remove('hover');
     });
 
     e.addEventListener('dragenter', (event) => {
-      if (dragged !== event.target) { e.classList.add('test2'); }
+      if (dragged !== event.target) { e.classList.add('hover2'); }
     });
 
     e.addEventListener('dragleave', () => {
-      e.classList.remove('test2');
+      e.classList.remove('hover2');
     });
 
     e.addEventListener('dragover', (event) => {
@@ -31,13 +31,15 @@ const sorting = () => {
     });
 
     e.addEventListener('drop', () => {
-      e.classList.remove('test2');
+      e.classList.remove('hover2');
       dropped = e.children[0].children[0].id;
       const swap = (arr, draggedIndex, droppedIndex) => {
-        const temp = arr[droppedIndex];
-        arr[droppedIndex] = arr[draggedIndex];
-        arr[draggedIndex] = temp;
-        console.log(`you swap ${draggedIndex} to ${droppedIndex}`);
+        const temp = arr[droppedIndex].description;
+        arr[droppedIndex].description = arr[draggedIndex].description;
+        arr[draggedIndex].description = temp;
+        const temp2 = arr[droppedIndex].completed;
+        arr[droppedIndex].completed = arr[draggedIndex].completed;
+        arr[draggedIndex].completed = temp2;
         showTasks();
         saveLocalstorage();
       };
