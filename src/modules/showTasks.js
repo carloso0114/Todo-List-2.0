@@ -7,7 +7,7 @@ export default () => {
   ulSelector.innerHTML = '';
   taskList.forEach((e) => {
     const li = document.createElement('li');
-    if (e.completed) {
+    if (e.completed === true) {
       li.innerHTML = `
       <div class="d-flex justify-content-between align-items-center droppable">
       <div class="droppable"> 
@@ -21,7 +21,7 @@ export default () => {
       li.innerHTML = `
       <div class="d-flex justify-content-between align-items-center droppable">
       <div class="droppable"> 
-      <input class="checkbox m-2" type="checkbox" id="${e.index}" unchecked>
+      <input class="checkbox m-2" type="checkbox" id="${e.index}">
       <label class="droppable" for="${e.index}">${e.description}</label>
       </div>
       <i class="fas fa-ellipsis-v droppable" ></i>
