@@ -1,18 +1,15 @@
 import { taskList } from './taskClass.js';
 // eslint-disable-next-line import/no-cycle
 import showTasks from './showTasks.js';
+// eslint-disable-next-line import/no-cycle
+import { saveLocalstorage } from './localstorage.js';
 
 export default () => {
   const draggables = document.querySelectorAll('.draggable');
   let dragged;
   draggables.forEach((e) => {
     e.addEventListener('dragstart', (event) => {
-      e.classList.add('dragging');
       dragged = event.target;
-    });
-
-    e.addEventListener('dragend', () => {
-      e.classList.remove('dragging');
     });
 
     e.addEventListener('dragover', (event) => {
@@ -37,6 +34,7 @@ export default () => {
           taskList[droppedIndex].completed = tempChecked;
           taskList[draggedIndex].completed = tempChecked2;
           showTasks();
+          saveLocalstorage();
         }
       }
     });
