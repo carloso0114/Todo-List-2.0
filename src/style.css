@@ -10,3 +10,13 @@ a {
 .draggable {
   cursor: move;
 }
+
+.test {
+  background-color: gray;
+  opacity: 0.6;
+}
+
+.test2 {
+  background-color: blue;
+  opacity: 0.6;
+}

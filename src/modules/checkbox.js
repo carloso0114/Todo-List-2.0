@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import { saveLocalstorage } from './localstorage.js';
 import { taskList } from './taskClass.js';
 
