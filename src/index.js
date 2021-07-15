@@ -3,6 +3,7 @@ import { Task, taskList } from './modules/taskClass.js';
 import showTasks from './modules/showTasks.js';
 import { getLocalstorage, saveLocalstorage } from './modules/localstorage.js';
 
+
 getLocalstorage();
 
 const inputSelector = document.querySelector('#inputTask');

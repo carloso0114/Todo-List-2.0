@@ -12,5 +12,5 @@ a {
 }
 
 .dragging {
-  opacity: .5;
+  background-color: red;
 }
