@@ -9,12 +9,12 @@ const checkboxListener = () => {
       const index2 = e.id;
       if (e.checked) {
         taskList[index2].completed = true;
+        e.nextSibling.nextSibling.classList.add('completed');
         saveLocalstorage();
       } else {
         taskList[index2].completed = false;
         saveLocalstorage();
       }
-    //   showTasks();
     });
   });
 };
