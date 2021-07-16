@@ -6,3 +6,21 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.draggable {
+  cursor: move;
+}
+
+.hover {
+  background-color: gray;
+  opacity: 0.6;
+}
+
+.hover2 {
+  background-color: blue;
+  opacity: 0.6;
+}
+
+.completed {
+  text-decoration: black line-through;
+}
