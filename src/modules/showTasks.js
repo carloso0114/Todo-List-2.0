@@ -1,26 +1,29 @@
 /* eslint-disable import/no-cycle */
 import { taskList } from './taskClass.js';
 import sort from './sort.js';
-import checkbox from './checkbox.js';
+import checkboxListener from './checkbox.js';
+import editTask from './editTask.js';
 
 const showTasks = () => {
   const ulSelector = document.querySelector('#taskUl');
+  let indexOfCheckboxes = -1;
   ulSelector.innerHTML = '';
   taskList.forEach((e) => {
+    indexOfCheckboxes += 1;
     const li = document.createElement('li');
     if (e.completed === true) {
       li.innerHTML = `
       <div>
-      <input class="checkbox m-2" type="checkbox" id="${e.index}" checked>
-      <label for="${e.index}">${e.description}</label>
+      <input class="checkbox m-2" type="checkbox" id="${indexOfCheckboxes}" checked=true>
+      <label class="completed" id="${indexOfCheckboxes}">${e.description}</label>
       </div>
       <i class="fs-5 bi bi-three-dots-vertical"></i>
       `;
     } else {
       li.innerHTML = `
       <div>
-      <input class="checkbox m-2" type="checkbox" id="${e.index}">
-      <label for="${e.index}">${e.description}</label>
+      <input class="checkbox m-2" type="checkbox" id="${indexOfCheckboxes}">
+      <label id="${indexOfCheckboxes}">${e.description}</label>
       </div>
       <i class="fs-5 bi bi-three-dots-vertical"></i>
       `;
@@ -30,7 +33,8 @@ const showTasks = () => {
     ulSelector.appendChild(li);
   });
   sort();
-  checkbox();
+  checkboxListener();
+  editTask();
 };
 
 export default showTasks;
