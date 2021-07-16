@@ -1,9 +1,12 @@
+/* eslint-disable import/no-cycle */
 import { saveLocalstorage } from './localstorage.js';
 import showTasks from './showTasks.js';
 import { taskList } from './taskClass.js';
 
 const editTask = () => {
   const labelSelector = document.querySelectorAll('label[id]');
+  const icon = document.createElement('i');
+  icon.classList.add('bi', 'bi-trash', 'fs-5');
   const newInput = document.createElement('input');
   newInput.classList.add('no-border');
   newInput.setAttribute('type', 'text');
@@ -13,10 +16,11 @@ const editTask = () => {
       newInput.value = `${event.target.innerText}`;
       event.target.parentNode.append(newInput);
       newInput.focus();
+      event.target.parentNode.nextSibling.parentNode.append(icon);
+      event.target.parentNode.nextSibling.nextSibling.remove();
       newInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
           taskList[e.id].description = newInput.value;
-          console.log(taskList[e.id].description);
           saveLocalstorage();
           showTasks();
         }
