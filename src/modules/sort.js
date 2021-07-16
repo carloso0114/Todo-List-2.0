@@ -1,5 +1,4 @@
 /* eslint-disable import/no-cycle */
-/* eslint-disable no-console */
 import { saveLocalstorage } from './localstorage.js';
 import { taskList } from './taskClass.js';
 import showTasks from './showTasks.js';

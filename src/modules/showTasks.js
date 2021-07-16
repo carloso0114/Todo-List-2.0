@@ -1,6 +1,7 @@
 /* eslint-disable import/no-cycle */
 import { taskList } from './taskClass.js';
 import sort from './sort.js';
+import checkbox from './checkbox.js';
 
 const showTasks = () => {
   const ulSelector = document.querySelector('#taskUl');
@@ -10,7 +11,7 @@ const showTasks = () => {
     if (e.completed === true) {
       li.innerHTML = `
       <div>
-      <input class="checkbox m-2" type="checkbox" id="${e.index} checked">
+      <input class="checkbox m-2" type="checkbox" id="${e.index}" checked>
       <label for="${e.index}">${e.description}</label>
       </div>
       <i class="fas fa-ellipsis-v" ></i>
@@ -29,6 +30,7 @@ const showTasks = () => {
     ulSelector.appendChild(li);
   });
   sort();
+  checkbox();
 };
 
 export default showTasks;

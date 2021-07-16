@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable import/no-cycle */
 import { taskList } from './taskClass.js';
 import showTasks from './showTasks.js';
 

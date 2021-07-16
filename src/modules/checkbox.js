@@ -1,20 +1,22 @@
-// eslint-disable-next-line import/no-cycle
+/* eslint-disable import/no-cycle */
 import { saveLocalstorage } from './localstorage.js';
 import { taskList } from './taskClass.js';
 
-export default () => {
+const checkboxListener = () => {
   const checkboxes = document.querySelectorAll('.checkbox');
-  for (let i = 0; i < checkboxes.length; i += 1) {
-    checkboxes[i].addEventListener('change', () => {
-      if (checkboxes[i].checked) {
-        const index = checkboxes[i].id;
-        taskList[index].completed = true;
+  checkboxes.forEach((e) => {
+    e.addEventListener('change', () => {
+      const index2 = e.id;
+      if (e.checked) {
+        taskList[index2].completed = true;
         saveLocalstorage();
       } else {
-        const index = checkboxes[i].id;
-        taskList[index].completed = false;
+        taskList[index2].completed = false;
         saveLocalstorage();
       }
+    //   showTasks();
     });
-  }
+  });
 };
+
+export default checkboxListener;
