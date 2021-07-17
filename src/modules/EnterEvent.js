@@ -15,7 +15,7 @@ const EnterEvent = () => {
     }
   });
   const inputIcon = document.querySelector('.bi-arrow-return-left');
-  inputIcon.addEventListener('click', (e) => {
+  inputIcon.addEventListener('click', () => {
     const task = new Task(inputSelector.value);
     taskList.push(task);
     showTasks();
