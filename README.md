@@ -17,7 +17,7 @@ Clear the tasks one by one or use the clear all completed button.
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/carloso0114/Todo-List-2.0/todo_list_day1/dist/index.html)
+[Live Demo Link](https://raw.githack.com/carloso0114/Todo-List-2.0/add-and-remove/dist/index.html)
 
 ### Prerequisites
 - Browser
@@ -29,6 +29,10 @@ Clear the tasks one by one or use the clear all completed button.
 - Open Terminal
 - In your prefered folder, run `https://github.com/carloso0114/Todo-List-2.0.git`
 - Open the `index.html` in the /dist to run the project
+- Optional: If you want to edit the project you must run:
+  <npm i>
+  edit the files inside /src and run :
+  <npm run build>
 
 
 ### Usage
