@@ -17,7 +17,7 @@ const showTasks = () => {
       <input class="checkbox m-2" type="checkbox" id="${indexOfCheckboxes}" checked=true>
       <label class="completed" id="${indexOfCheckboxes}">${e.description}</label>
       </div>
-      <i class="fs-5 bi bi-three-dots-vertical"></i>
+      <i class="fs-5 bi bi-three-dots-vertical draggableicon"></i>
       `;
     } else {
       li.innerHTML = `
@@ -25,7 +25,7 @@ const showTasks = () => {
       <input class="checkbox m-2" type="checkbox" id="${indexOfCheckboxes}">
       <label id="${indexOfCheckboxes}">${e.description}</label>
       </div>
-      <i class="fs-5 bi bi-three-dots-vertical"></i>
+      <i class="fs-5 bi bi-three-dots-vertical draggableicon"></i>
       `;
     }
     li.classList.add('list-group-item', 'draggable', 'droppable', 'd-flex', 'justify-content-between', 'align-items-center');

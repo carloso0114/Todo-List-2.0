@@ -2,10 +2,6 @@ ul {
   list-style-type: none;
 }
 
-.draggable {
-  cursor: move;
-}
-
 .hover {
   background-color: gray;
   opacity: 0.6;
@@ -32,4 +28,12 @@ ul {
 
 .no-border:focus {
   outline: none;
+}
+
+.bi-trash {
+  cursor: pointer;
+}
+
+.draggableicon {
+  cursor: move;
 }

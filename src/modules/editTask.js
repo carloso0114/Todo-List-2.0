@@ -16,7 +16,13 @@ const editTask = () => {
       newInput.value = `${event.target.innerText}`;
       event.target.parentNode.append(newInput);
       newInput.focus();
+      icon.setAttribute('id', `${event.target.id}`);
       event.target.parentNode.nextSibling.parentNode.append(icon);
+      icon.addEventListener('click', () => {
+        taskList.splice(e.id, 1);
+        saveLocalstorage();
+        showTasks();
+      });
       event.target.parentNode.nextSibling.nextSibling.remove();
       newInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
