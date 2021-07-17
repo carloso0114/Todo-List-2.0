@@ -1,15 +1,16 @@
-
+cd
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Todo List
 
-> In this project, you'll be able to find to-do tasks already been added to an array of objects.
+> In this project, you'll be able to do CRUD actions in a list of Taks.
 
 ![screenshot](./app_screenshot.png)
 
 Later on you can add tasks by yourself pressing enter in the input area or click the arrow icon.
 Edit the previosly added task.
-Clear the tasks one by one or use the clear all completed button.
+Clear the tasks one by one clicking in the label, or use the clear all completed button.
+Checkout the demo video for a hands free demostration!
 
 ## Built With
 
@@ -30,12 +31,12 @@ https://user-images.githubusercontent.com/14119855/126028712-e4fa15ff-0479-4b44-
 
 ### Setup
 - Open Terminal
-- In your prefered folder, run `https://github.com/carloso0114/Todo-List-2.0.git`
-- Open the `index.html` in the /dist to run the project
+- In your prefered folder, run <code>git clone `https://github.com/carloso0114/Todo-List-2.0.git`</code>
+- Open the `index.html` in the /dist folder to run the compiled webpack project.
 - Optional: If you want to edit the project you must run:
-  <npm i>
+  <code>npm i</code>
   edit the files inside /src and run :
-  <npm run build>
+  <code>npm run build</code>
 
 
 ### Usage
