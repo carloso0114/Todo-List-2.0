@@ -37,3 +37,7 @@ ul {
 .draggableicon {
   cursor: move;
 }
+
+.bi-arrow-return-left:hover {
+  cursor: pointer;
+}

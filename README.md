@@ -6,7 +6,9 @@
 
 ![screenshot](./app_screenshot.png)
 
-Later on you can add tasks by yourself pressing enter in the input area.
+Later on you can add tasks by yourself pressing enter in the input area or click the arrow icon.
+Edit the previosly added task.
+Clear the tasks one by one or use the clear all completed button.
 
 ## Built With
 
