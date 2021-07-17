@@ -12,6 +12,7 @@ const showTasks = () => {
     indexOfCheckboxes += 1;
     const li = document.createElement('li');
     if (e.completed === true) {
+      e.id = indexOfCheckboxes;
       li.innerHTML = `
       <div>
       <input class="checkbox m-2" type="checkbox" id="${indexOfCheckboxes}" checked=true>
@@ -20,6 +21,7 @@ const showTasks = () => {
       <i class="fs-5 bi bi-three-dots-vertical draggableicon"></i>
       `;
     } else {
+      e.id = indexOfCheckboxes;
       li.innerHTML = `
       <div>
       <input class="checkbox m-2" type="checkbox" id="${indexOfCheckboxes}">

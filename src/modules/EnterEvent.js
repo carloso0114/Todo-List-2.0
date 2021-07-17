@@ -4,7 +4,6 @@ import { Task, taskList } from './taskClass.js';
 
 const EnterEvent = () => {
   const inputSelector = document.querySelector('#inputTask');
-
   inputSelector.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       const task = new Task(inputSelector.value);
