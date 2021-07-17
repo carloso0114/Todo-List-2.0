@@ -17,6 +17,8 @@ Later on you can add tasks by yourself pressing enter in the input area.
 
 [Live Demo Link](https://raw.githack.com/carloso0114/Todo-List-2.0/todo_list_day1/dist/index.html)
 
+https://user-images.githubusercontent.com/14119855/126028654-3d5083ab-8cb1-471b-b7c1-8a83e8a867ef.mp4
+
 ### Prerequisites
 - Browser
 - Text Editor (VSCode is suggested.)
