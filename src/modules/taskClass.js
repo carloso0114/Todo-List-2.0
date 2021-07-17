@@ -1,10 +1,10 @@
 const taskList = [];
 
 class Task {
-  constructor(description, completed = false, index = taskList.length) {
+  constructor(description, id = taskList.length, completed = false) {
     this.description = description;
     this.completed = completed;
-    this.index = index;
+    this.id = id;
   }
 }
 

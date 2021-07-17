@@ -1,4 +1,5 @@
 /* eslint-disable import/no-cycle */
+// import deleteTask from './delete.js';
 import { saveLocalstorage } from './localstorage.js';
 import { taskList } from './taskClass.js';
 
@@ -13,6 +14,7 @@ const checkboxListener = () => {
         saveLocalstorage();
       } else {
         taskList[index2].completed = false;
+        e.nextSibling.nextSibling.classList.remove('completed');
         saveLocalstorage();
       }
     });
