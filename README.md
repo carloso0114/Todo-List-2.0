@@ -1,4 +1,3 @@
-cd
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Todo List
