@@ -18,7 +18,7 @@ Checkout the demo video for a hands free demostration!
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/carloso0114/Todo-List-2.0/add-and-remove/dist/index.html)
+[Live Demo Link](https://carloso0114.github.io/Todo-List-2.0/)
 
 https://user-images.githubusercontent.com/14119855/126028712-e4fa15ff-0479-4b44-bf80-64d065442d5d.mp4
 
