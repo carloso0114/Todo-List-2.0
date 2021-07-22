@@ -4,7 +4,7 @@
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "watch": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "start": "webpack serve --open --mode development"
@@ -20,6 +20,7 @@
     "url": "https://github.com/carloso0114/Todo-List-2.0/issues"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.14.5",
     "babel-eslint": "^10.1.0",
     "css-loader": "^5.2.7",
     "eslint": "^7.30.0",
