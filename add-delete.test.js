@@ -9,7 +9,7 @@ document.body.innerHTML = `
 <span class="clearBtn" id="clear">Clear all completed</span>
 `;
 
-describe('Test add functionality', () => {
+describe('Test add and remove functionality', () => {
   it('Add one new item to the list and check the li', () => {
     EnterEvent();
     const inputSelector = document.querySelector('#inputTask');
@@ -28,6 +28,7 @@ describe('Test add functionality', () => {
     const li = document.querySelectorAll('#taskUl li');
     expect(li).toHaveLength(0);
   });
+
   it('Delete many tasks from the list', () => {
     const inputSelector = document.querySelector('#inputTask');
     const inputIcon = document.querySelector('.bi-arrow-return-left');
