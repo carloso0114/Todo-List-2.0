@@ -20,6 +20,10 @@ describe('Test add and remove functionality', () => {
     expect(li).toHaveLength(1);
   });
 
+  it('Check lenght of array', () => {
+    expect(taskList).toHaveLength(1);
+  });
+
   it('Delete one item of the task list and check the li', () => {
     const label = document.querySelector("label[id='0']");
     label.click();
@@ -48,8 +52,8 @@ describe('Test add and remove functionality', () => {
     li = document.querySelectorAll('#taskUl li');
     expect(li).toHaveLength(0);
   });
-  
   it('Match taskList array length with localStorage length', () => {
     expect(taskList.length).toBe(JSON.parse(localStorage.getItem('taskListKey')).length);
   });
+
 });
