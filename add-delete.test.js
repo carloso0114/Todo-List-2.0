@@ -1,4 +1,4 @@
-import editTask from './src/modules/editTask.js';
+import deleteTask from './src/modules/delete.js';
 import { EnterEvent } from './src/modules/EnterEvent.js';
 
 document.body.innerHTML = `
@@ -27,10 +27,23 @@ describe('Test add functionality', () => {
     const li = document.querySelectorAll('#taskUl li');
     expect(li).toHaveLength(0);
   });
-  // test('delete one task from the list', () => {
-  //   editTask();
-
-  //   expect(taskList).toHaveLength(1);
-
-  // });
+  it('Delete many tasks from the list', () => {
+    const inputSelector = document.querySelector('#inputTask');
+    const inputIcon = document.querySelector('.bi-arrow-return-left');
+    inputSelector.value = 'Clean the house';
+    inputIcon.click();
+    inputSelector.value = 'Take out the trash';
+    inputIcon.click();
+    let li = document.querySelectorAll('#taskUl li');
+    expect(li).toHaveLength(2);
+    deleteTask();
+    let checkboxSelector = document.querySelector(".checkbox[id='0']");
+    checkboxSelector.click();
+    checkboxSelector = document.querySelector(".checkbox[id='1']");
+    checkboxSelector.click();
+    const clearBtnSelector = document.querySelector('#clear');
+    clearBtnSelector.click();
+    li = document.querySelectorAll('#taskUl li');
+    expect(li).toHaveLength(0);
+  });
 });
