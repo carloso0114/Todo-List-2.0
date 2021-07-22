@@ -8,8 +8,8 @@ const saveLocalstorage = () => {
 
 const getLocalstorage = () => {
   if (localStorage.getItem('taskListKey')) {
-    const getBooks = JSON.parse(localStorage.getItem('taskListKey'));
-    getBooks.forEach((t) => {
+    const tasks = JSON.parse(localStorage.getItem('taskListKey'));
+    tasks.forEach((t) => {
       taskList.push(t);
     });
     showTasks();

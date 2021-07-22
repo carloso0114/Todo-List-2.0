@@ -1,5 +1,6 @@
 import deleteTask from './src/modules/delete.js';
 import { EnterEvent } from './src/modules/EnterEvent.js';
+import { taskList } from './src/modules/taskClass.js';
 
 document.body.innerHTML = `
 <input type="text" class="form-control" id="inputTask" placeholder="Add to your list..." />
@@ -45,5 +46,8 @@ describe('Test add functionality', () => {
     clearBtnSelector.click();
     li = document.querySelectorAll('#taskUl li');
     expect(li).toHaveLength(0);
+  });
+  it('Match taskList array length with localStorage length', () => {
+    expect(taskList.length).toBe(JSON.parse(localStorage.getItem('taskListKey')).length);
   });
 });
