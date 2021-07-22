@@ -48,6 +48,7 @@ describe('Test add and remove functionality', () => {
     li = document.querySelectorAll('#taskUl li');
     expect(li).toHaveLength(0);
   });
+  
   it('Match taskList array length with localStorage length', () => {
     expect(taskList.length).toBe(JSON.parse(localStorage.getItem('taskListKey')).length);
   });
