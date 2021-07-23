@@ -34,4 +34,11 @@ describe('Test Edit/Update and Clear all completed task functionality', () => {
     expect(taskList[0].description).toBe('hello world');
     expect(taskList[0].description).toBe(JSON.parse(localStorage.getItem('taskListKey'))[0].description);
   });
+
+  it('Update the completed status of the task', () =>{
+    let checkboxSelector = document.querySelector(".checkbox[id='0']");
+    checkboxSelector.click();
+    expect(taskList[0].completed).toBe(true);
+    expect(taskList[0].completed).toBe(JSON.parse(localStorage.getItem('taskListKey'))[0].completed);
+  })  
 });
