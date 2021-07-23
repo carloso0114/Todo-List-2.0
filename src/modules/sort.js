@@ -3,6 +3,14 @@ import { saveLocalstorage } from './localstorage.js';
 import { taskList } from './taskClass.js';
 import showTasks from './showTasks.js';
 
+const swap = (arr, draggedIndex, droppedIndex) => {
+  const temp = arr[droppedIndex];
+  arr[droppedIndex] = arr[draggedIndex];
+  arr[draggedIndex] = temp;
+  showTasks();
+  saveLocalstorage();
+};
+
 const sorting = () => {
   const draggables = document.querySelectorAll('.draggable');
   let dragged = null;
@@ -32,13 +40,6 @@ const sorting = () => {
     e.addEventListener('drop', () => {
       e.classList.remove('hover2');
       dropped = e.children[0].children[0].id;
-      const swap = (arr, draggedIndex, droppedIndex) => {
-        const temp = arr[droppedIndex];
-        arr[droppedIndex] = arr[draggedIndex];
-        arr[draggedIndex] = temp;
-        showTasks();
-        saveLocalstorage();
-      };
       if (dragged !== dropped) {
         if (e.classList.contains('droppable')) {
           swap(taskList, dragged, dropped);
@@ -49,3 +50,4 @@ const sorting = () => {
 };
 
 export default sorting;
+export { swap };

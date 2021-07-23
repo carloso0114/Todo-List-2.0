@@ -3,6 +3,10 @@ import { saveLocalstorage } from './localstorage.js';
 import showTasks from './showTasks.js';
 import { taskList } from './taskClass.js';
 
+const editDescription = (id, x) => {
+  taskList[id].description = x;
+};
+
 const editTask = () => {
   const labelSelector = document.querySelectorAll('label[id]');
   const icon = document.createElement('i');
@@ -26,7 +30,7 @@ const editTask = () => {
       event.target.parentNode.nextSibling.nextSibling.remove();
       newInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
-          taskList[e.id].description = newInput.value;
+          editDescription(e.id, newInput.value);
           saveLocalstorage();
           showTasks();
         }
@@ -37,3 +41,4 @@ const editTask = () => {
 };
 
 export default editTask;
+export { editDescription };
