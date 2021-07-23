@@ -1,8 +1,8 @@
-import deleteTask from './src/modules/delete.js';
 import { editDescription } from './src/modules/editTask.js';
 import { EnterEvent } from './src/modules/EnterEvent.js';
 import { saveLocalstorage } from './src/modules/localstorage.js';
 import showTasks from './src/modules/showTasks.js';
+import { swap } from './src/modules/sort.js';
 import { taskList } from './src/modules/taskClass.js';
 
 document.body.innerHTML = `
@@ -36,9 +36,15 @@ describe('Test Edit/Update and Clear all completed task functionality', () => {
   });
 
   it('Update the completed status of the task', () => {
-    let checkboxSelector = document.querySelector(".checkbox[id='0']");
+    const checkboxSelector = document.querySelector(".checkbox[id='0']");
     checkboxSelector.click();
     expect(taskList[0].completed).toBe(true);
     expect(taskList[0].completed).toBe(JSON.parse(localStorage.getItem('taskListKey'))[0].completed);
-  })  
+  });
+  it('Update objects values for drag and drop tasks', () => {
+    swap(taskList, 1, 0);
+    expect(taskList[1].description).not.toBe('Clean the car');
+    expect(taskList[1].description).toBe('hello world');
+    expect(taskList[1].id).toBe(1);
+  });
 });
