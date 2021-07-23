@@ -1,4 +1,4 @@
-import exports from 'webpack';
+import deleteTask from './src/modules/delete.js';
 import { editDescription } from './src/modules/editTask.js';
 import { EnterEvent } from './src/modules/EnterEvent.js';
 import { saveLocalstorage } from './src/modules/localstorage.js';
@@ -48,18 +48,24 @@ describe('Test Edit/Update and Clear all completed task functionality', () => {
     expect(taskList[1].description).not.toBe('Clean the car');
     expect(taskList[1].description).toBe('hello world');
     expect(taskList[1].id).toBe(1);
+    expect(taskList[1].completed).toBe(true);
+    saveLocalstorage();
+    showTasks();
   });
 
   it('Remove many tasks from the list', () => {
-    let checkboxSelector = document.querySelector(".checkbox[id='0']");
+    deleteTask();
+    let checkboxSelector = document.querySelector(".checkbox[id='0']"); // completed true
     checkboxSelector.click();
-    checkboxSelector = document.querySelector(".checkbox[id='1']");
+    checkboxSelector = document.querySelector(".checkbox[id='1']"); // completed false
+    checkboxSelector.click();
+    checkboxSelector = document.querySelector(".checkbox[id='2']"); // completed true
     checkboxSelector.click();
     const clearBtnSelector = document.querySelector('#clear');
     clearBtnSelector.click();
-    li = document.querySelectorAll('#taskUl li');
+    const li = document.querySelectorAll('#taskUl li');
     expect(li).toHaveLength(1);
     expect(taskList).toHaveLength(1);
     expect(taskList.length).toBe(JSON.parse(localStorage.getItem('taskListKey')).length);
-  })
+  });
 });
