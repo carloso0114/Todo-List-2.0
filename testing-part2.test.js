@@ -1,3 +1,4 @@
+import exports from 'webpack';
 import { editDescription } from './src/modules/editTask.js';
 import { EnterEvent } from './src/modules/EnterEvent.js';
 import { saveLocalstorage } from './src/modules/localstorage.js';
@@ -41,10 +42,24 @@ describe('Test Edit/Update and Clear all completed task functionality', () => {
     expect(taskList[0].completed).toBe(true);
     expect(taskList[0].completed).toBe(JSON.parse(localStorage.getItem('taskListKey'))[0].completed);
   });
+
   it('Update objects values for drag and drop tasks', () => {
     swap(taskList, 1, 0);
     expect(taskList[1].description).not.toBe('Clean the car');
     expect(taskList[1].description).toBe('hello world');
     expect(taskList[1].id).toBe(1);
   });
+
+  it('Remove many tasks from the list', () => {
+    let checkboxSelector = document.querySelector(".checkbox[id='0']");
+    checkboxSelector.click();
+    checkboxSelector = document.querySelector(".checkbox[id='1']");
+    checkboxSelector.click();
+    const clearBtnSelector = document.querySelector('#clear');
+    clearBtnSelector.click();
+    li = document.querySelectorAll('#taskUl li');
+    expect(li).toHaveLength(1);
+    expect(taskList).toHaveLength(1);
+    expect(taskList.length).toBe(JSON.parse(localStorage.getItem('taskListKey')).length);
+  })
 });
