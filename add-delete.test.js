@@ -20,6 +20,10 @@ describe('Test add and remove functionality', () => {
     expect(li).toHaveLength(1);
   });
 
+  it('Check lenght of array', () => {
+    expect(taskList).toHaveLength(1);
+  });
+
   it('Delete one item of the task list and check the li', () => {
     const label = document.querySelector("label[id='0']");
     label.click();
